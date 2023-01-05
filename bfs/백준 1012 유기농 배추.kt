@@ -1,6 +1,6 @@
 // 백준 1012번 유기농 배추
 // 배추가 상하좌우 네 방향
-// 
+// Sliver2
 
 import java.util.LinkedList
 import java.util.StringTokenizer
