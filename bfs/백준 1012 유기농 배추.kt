@@ -1,5 +1,6 @@
 // 백준 1012번 유기농 배추
 // 배추가 상하좌우 네 방향
+// Silver2
 
 import java.util.LinkedList
 import java.util.StringTokenizer
@@ -32,7 +33,7 @@ fun main() = with(System.`in`.bufferedReader()) {
         for (x in 0 until m) {
             for (y in 0 until n) {
                 if (map[y][x] && visited[y][x].not()) {
-                    val queue = LinkedList<Pair<Int, Int>>()
+                    val queue = LinkedList<Pair<Int, Int>>()    // 왜 ArrayDeque 보다 LinkedList를 사용하는 것이 더 빠를까?를 알아야한다.
                     queue.add(Pair(y, x))
                     while (queue.isEmpty().not()) {
                         val (col, row) = queue.poll()
