@@ -2,7 +2,7 @@ import java.util.StringTokenizer
 import java.util.LinkedList
 
 // 백준 7576번 토마토
-// Gold 2
+// Gold 5
 
 const val RIPE = 1
 const val UNRIPE = 0
