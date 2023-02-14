@@ -22,8 +22,9 @@ fun main() = with(System.`in`.bufferedReader()) {
     minList.sort()
     val (a, b, c) = Triple(minList[0], minList[1], minList[2])
 
+    val sorted = numbers.sorted()
     if (n == 1L) {
-        print(a + b + c + numbers[3] + numbers[4])
+        print(sorted[0] + sorted[1] + sorted[2] + sorted[3] + sorted[4])
         return
     } else {
         val sum1 = 4L * (a + b + c)
