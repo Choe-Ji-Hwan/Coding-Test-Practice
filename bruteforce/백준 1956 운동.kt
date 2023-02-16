@@ -12,7 +12,7 @@ fun main() = with(System.`in`.bufferedReader()) {
         val (start, end, cost) = Triple(edgeList[0] - 1, edgeList[1] - 1, edgeList[2])
         graph[start][end] = cost
     }
-    // 플로이드 마샬
+    // 플로이드 와샬
     for (k in 0 until v) {
         for (i in 0 until v) {
             for (j in 0 until v) {
