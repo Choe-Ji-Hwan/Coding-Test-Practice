@@ -19,10 +19,6 @@ fun main() = with(System.`in`.bufferedReader()) {
             }
         }
     }
-    graph.forEach {
-        it.forEach { t -> print("$t ") }
-        println()
-    }
     var count = 0
     for (i in 0 until n) {
         var temp = 0
