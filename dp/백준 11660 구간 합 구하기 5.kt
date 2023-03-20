@@ -18,8 +18,8 @@ fun main() = with(System.`in`.bufferedReader()) {
     }
     repeat(m) {
         val line = readLine().split(" ").map { it.toInt() }
-        val (x1, y1) = Pair(line[0], line[1])
-        val (x2, y2) = Pair(line[2], line[3])
+        val (y1, x1) = Pair(line[0], line[1])
+        val (y2, x2) = Pair(line[2], line[3])
         sb.append("${grid[y2][x2] - grid[y2][x1 - 1] - grid[y1 - 1][x2] + grid[y1 - 1][x1 - 1]}\n")
     }
     print(sb)
