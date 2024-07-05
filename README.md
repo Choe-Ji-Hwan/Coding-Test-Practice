@@ -5,7 +5,7 @@
 > - DFS(Depth First Search)
 > - BFS(Breadth First Search)
 > - 정렬(Sort)
-> - 다이나믹 프로그래밍(DP)
+> - 다이나믹 프로그래밍(DP) -> 현재 부수기 중
 > - 메모이제이션(Memoization)
 > - 이진 탐색(Binary Search)
 > - 최소신장트리(MST)
