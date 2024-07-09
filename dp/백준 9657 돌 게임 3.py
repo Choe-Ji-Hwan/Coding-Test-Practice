@@ -6,6 +6,11 @@ input = sys.stdin.readline
 # 1개, 3개, 4개 -> dp로 풀 수 있음.
 def solution(n):
     participate = {0: "SK", 1: "CY"}
+    if n == 1: return participate[0]
+    if n == 2: return participate[1]
+    if n == 3: return participate[0]
+    if n == 4: return participate[0]
+
     # 이기는 사람을 저장 하기 위한 배열.
     dp = [0] * (n + 1)
     dp[1] = 0   # (1). 상근 승리.
