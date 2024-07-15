@@ -9,6 +9,10 @@ def mul_matrix(matrix1, matrix2, divider):
     matrix2_col = len(matrix2)  # k
     matrix2_row = len(matrix2[0])  # n
 
+    # 행렬 곱셈, k 값은 같아야 곱셈이 됨.
+    if matrix1_row != matrix2_col:
+        return False
+
     result = [[0] * matrix2_row for _ in range(matrix1_col)]  # mxn
 
     for i in range(matrix1_col):
