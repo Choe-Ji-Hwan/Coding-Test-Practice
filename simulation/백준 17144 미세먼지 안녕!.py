@@ -63,10 +63,11 @@ for i in range(c):
             cleaner[direct] = (i, j)
             direct += 1
 
-
+# 총 O(1000 * 2500*10) = 총 최대 O(25,000,000) -> 1초 내외.
+# 최대 O(1000)
 for _ in range(t):
     new_dust = deque([])
-
+    # 최대 O(2500 * 4)
     while len(dust) != 0:
         y, x, amount = dust.popleft()
         amount_part = amount // 5
@@ -87,17 +88,19 @@ for _ in range(t):
     clear2_y, clear2_x = cleaner[1]
     new_room[clear1_y][clear1_x] = -1
     new_room[clear2_y][clear2_x] = -1
+    # 최대 O(2500 * 4)
     for ele in new_dust:
         new_y, new_x, new_amount = ele
         new_room[new_y][new_x] += new_amount
 
     # 다시 큐에 담음.
     new_dust.clear()
+    # 최대 O(2500)
     for i in range(c):
         for j in range(r):
             if new_room[i][j] != 0 and new_room[i][j] != -1:
                 new_dust.append((i, j, new_room[i][j]))
-    # 움직임.
+    # 움직임. # 최대 O(2500)
     dust = wind(new_dust)
 
 
