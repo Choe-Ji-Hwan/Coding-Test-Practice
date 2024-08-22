@@ -17,7 +17,7 @@ for i in range(n):
         dp[i][cost] = max(dp[i][cost], dp[i - 1][cost])
 
 
-for i in range(cost_sum):
+for i in range(cost_sum + 1):
     if dp[n - 1][i] >= m:
         print(i)
         break
